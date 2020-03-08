@@ -20,6 +20,7 @@
 		22DF8D9522FF119D0051F319 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22DF8D9422FF119D0051F319 /* Assets.xcassets */; };
 		22DF8D9822FF119D0051F319 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22DF8D9622FF119D0051F319 /* LaunchScreen.storyboard */; };
 		22DF8D9B22FF119D0051F319 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22DF8D9A22FF119D0051F319 /* main.m */; };
+		8B4285FC24156A2B00823B02 /* TOSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4285FB24156A2B00823B02 /* TOSegmentedControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		22DF8D9A22FF119D0051F319 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		22E1FE3A232F7F0600CE1C92 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		22E1FE3B232F7F0D00CE1C92 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		8B4285FB24156A2B00823B02 /* TOSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TOSegmentedControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 		2229F1AB230060E0000DABD8 /* TOSegmentedControl */ = {
 			isa = PBXGroup;
 			children = (
+				8B4285FB24156A2B00823B02 /* TOSegmentedControl.swift */,
 				22C93B05232AA79900A281CA /* TOSegmentedControl.h */,
 				22C93B00232AA6FF00A281CA /* TOSegmentedControl.m */,
 				22C93B0C232ADBEF00A281CA /* Private */,
@@ -235,6 +238,7 @@
 				TargetAttributes = {
 					228CEE3023289D4E000B055C = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1130;
 					};
 					228CEE422328A009000B055C = {
 						CreatedOnToolsVersion = 11.0;
@@ -299,6 +303,7 @@
 			files = (
 				22C93B0F232ADFDD00A281CA /* TOSegmentedControlSegment.m in Sources */,
 				22C93B03232AA6FF00A281CA /* TOSegmentedControl.m in Sources */,
+				8B4285FC24156A2B00823B02 /* TOSegmentedControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +352,7 @@
 		228CEE3B23289D4E000B055C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -367,6 +373,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = dev.tim.TOSegmentedControlFramework;
 				PRODUCT_NAME = TOSegmentedControl;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -376,6 +384,7 @@
 		228CEE3C23289D4E000B055C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -396,6 +405,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = dev.tim.TOSegmentedControlFramework;
 				PRODUCT_NAME = TOSegmentedControl;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";

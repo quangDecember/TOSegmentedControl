@@ -86,7 +86,7 @@ static CGFloat const kTOSegmentedControlDirectionArrowMargin = 2.0f;
 
 - (instancetype)initWithItems:(NSArray *)items
 {
-    if (self = [super initWithFrame:(CGRect){0.0f, 0.0f, 300.0f, 32.0f}]) {
+    if (self = [super initWithFrame:CGRectMake(0.0f, 0.0f, 300.0f, 32.0f)]) {
         [self commonInit];
         self.items = [self sanitizedItemArrayWithItems:items];
     }
@@ -114,7 +114,7 @@ static CGFloat const kTOSegmentedControlDirectionArrowMargin = 2.0f;
 
 - (instancetype)init
 {
-    if (self = [super initWithFrame:(CGRect){0.0f, 0.0f, 300.0f, 32.0f}]) {
+    if (self = [super initWithFrame:CGRectMake(0.0f, 0.0f, 300.0f, 32.0f)]) {
         [self commonInit];
     }
 
@@ -489,7 +489,7 @@ static CGFloat const kTOSegmentedControlDirectionArrowMargin = 2.0f;
 
     // Match the shadow path to the new size of the thumb view
     CGPathRef oldShadowPath = self.thumbView.layer.shadowPath;
-    UIBezierPath *shadowPath = [UIBezierPath bezierPathWithRoundedRect:(CGRect){CGPointZero, frame.size}
+    UIBezierPath *shadowPath = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(CGPointZero.x, CGPointZero.y, frame.size.width, frame.size.height)
                                                           cornerRadius:self.cornerRadius - self.thumbInset];
 
     // If the segmented control is animating its shape, to prevent the
@@ -1294,7 +1294,7 @@ static CGFloat const kTOSegmentedControlDirectionArrowMargin = 2.0f;
 // -----------------------------------------------
 // Shadow Properties
 
-- (void)setThumbShadowOffset:(CGFloat)thumbShadowOffset {self.thumbView.layer.shadowOffset = (CGSize){0.0f, thumbShadowOffset}; }
+- (void)setThumbShadowOffset:(CGFloat)thumbShadowOffset {self.thumbView.layer.shadowOffset = CGSizeMake(0.0f, thumbShadowOffset); }
 - (CGFloat)thumbShadowOffset { return self.thumbView.layer.shadowOffset.height; }
 
 - (void)setThumbShadowOpacity:(CGFloat)thumbShadowOpacity { self.thumbView.layer.shadowOpacity = thumbShadowOpacity; }
@@ -1339,7 +1339,7 @@ static CGFloat const kTOSegmentedControlDirectionArrowMargin = 2.0f;
     if (arrowImage != nil) { return arrowImage; }
 
     // Generate for the first time
-    UIGraphicsBeginImageContextWithOptions((CGSize){8.0f, 4.0f}, NO, 0.0f);
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(8.0f, 4.0f), NO, 0.0f);
     {
         UIBezierPath* bezierPath = [UIBezierPath bezierPath];
         [bezierPath moveToPoint: CGPointMake(7.25, 0.75)];
@@ -1368,7 +1368,7 @@ static CGFloat const kTOSegmentedControlDirectionArrowMargin = 2.0f;
     UIImage *separatorImage = [self.imageTable objectForKey:kTOSegmentedControlSeparatorImage];
     if (separatorImage != nil) { return separatorImage; }
 
-    UIGraphicsBeginImageContextWithOptions((CGSize){1.0f, 3.0f}, NO, 0.0f);
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(1.0f, 3.0f), NO, 0.0f);
     {
         UIBezierPath* separatorPath = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, 1, 3) cornerRadius:0.5];
         [UIColor.blackColor setFill];
@@ -1378,7 +1378,7 @@ static CGFloat const kTOSegmentedControlDirectionArrowMargin = 2.0f;
     UIGraphicsEndImageContext();
 
     // Format image to be resizable and tint-able.
-    separatorImage = [separatorImage resizableImageWithCapInsets:(UIEdgeInsets){1.0f, 0.0f, 1.0f, 0.0f}
+    separatorImage = [separatorImage resizableImageWithCapInsets: UIEdgeInsetsMake(1.0f, 0.0f, 1.0f, 0.0f)
                                                     resizingMode:UIImageResizingModeTile];
     separatorImage = [separatorImage imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
 
